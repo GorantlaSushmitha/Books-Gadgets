@@ -13,9 +13,9 @@ public class ProductServiceImpl implements ProductService
 	private ProductDao productDao;
 	
 	
-	public void saveProduct(Product product) 
+	public void saveOrUpdateProduct(Product product) 
 	{
-		productDao.saveProduct(product);	
+		productDao.saveOrUpdateProduct(product);	
 	}
 	public List<Product> getAllProducts() 
 	{

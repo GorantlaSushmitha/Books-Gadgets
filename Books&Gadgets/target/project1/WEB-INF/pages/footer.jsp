@@ -14,11 +14,13 @@
 		<title>Footer</title>
 	</head>
 	<body>
+	
+	<br><br><br><br><br>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand">
-						<li style="color: peraiah;">@ 2017, Books & Gadgets</li>
+						<li style="color: peraiah"><span class="glyphicon glyphicon-copyright-mark"> 2017 Books&Gadgets</span></li>
 					</a>
 				</div>
 				<ul class="nav navbar-brand navbar-right">

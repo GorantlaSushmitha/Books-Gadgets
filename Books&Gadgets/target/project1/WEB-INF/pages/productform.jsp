@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="url" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <%@ page isELIgnored="false" %>
 
 <html>
@@ -18,11 +19,11 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="header-admin.jsp" %>
 		<div class="container wrapper">
 			<div class="container">
-				<url:url var="url" value="/all/product/productlist"></url:url>
-				<form:form action="${url }" modelAttribute="product" method="post">
+				<url:url var="url" value="/admin/product/saveproduct"></url:url>
+				<form:form action="${url }" commandName="product" method="post" enctype="multipart/form-data">
 				<table>
 				<tr>
 					<div class="form-group">
@@ -34,33 +35,68 @@
 					<div class="form-group">
 						<td><label for="name">Enter Product name</label></td>
 						<td><form:input path="name"></form:input></td>
+						<td><form:errors path="name" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="manufacturer">Product Manufacturer</label></td>
 						<td><form:input  path="manufacturer"></form:input></td>
+						<td><form:errors path="manufacturer" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="price">Product Price</label></td>
 						<td><form:input  path="price"></form:input></td>
+						<td><form:errors path="price" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="unitInStock">Unit In Stock</label></td>
 						<td><form:input  path="unitInStock"></form:input></td>
+						<td><form:errors path="unitInStock" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="description">Description</label></td>
 						<td><form:input  path="description"></form:input></td>
+						<td><form:errors path="description" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
-					<tr>	
+					
+					<tr>
+						<div class="form-group">					
+					    <td><label for="Category">Category</label><td>	
+							<%-- <form:select  path="category.cid"	required="true">
+								<c:forEach items="${categoryList}" var="category">
+									<form:option path="category.cid" value="${category.cid}"/>${category.categoryName}
+								</c:forEach>
+					
+							</form:select> --%>
+						
+							<select>
+							    <c:forEach items="${categoryList}" var="category">
+							        <option  path="category.cid" value="${category.cId}"/>${category.categoryName}
+							    </c:forEach>
+							</select>
+							
+							
+							
+							<td>
+							
+							
+						</div>							
+					</tr>
+					<tr>
+						<div class="form-group">
+							<td><label for="image">Upload Image</label></td>
+							<td><input type="file" name="image" ></td>
+						</div>
+					</tr>
+					<tr>
 					<td><input type="submit" value="Add Product"></td>
 					</tr>
 					</table>
@@ -68,5 +104,6 @@
 			</div>
 		</div>
 	</body>
+
 	<%@ include file="footer.jsp" %>
 </html>

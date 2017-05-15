@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="collapse-example">
 					<ul class="nav navbar-nav">
-						<li><a href="home.html">Home<span class="sr-only">You are in home page link.</span></a></li>
+						<li><a href="home.jsp">Home<span class="sr-only">You are in home page link.</span></a></li>
 						<li><a href="aboutus.jsp">About Us<span class="sr-only">You are in about us page.</span></a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Books</a>

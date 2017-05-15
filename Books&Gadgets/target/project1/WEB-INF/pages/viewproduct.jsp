@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<%@ include file="header-admin.jsp" %>
 Product Details<br>
 
 PRODUCT NAME:   ${product.name }         	<br>
@@ -15,9 +15,9 @@ PRICE       :   ${product.price }         	<br>
 MANUFACTURER:   ${product.manufacturer }    <br>
 UNIT IN STOCK: ${product.unitInStock }		<br>
 DESCRIPTION :	${product.description }		<br>
+IMAGE:			${product.image }
 
-
-<url:url value="/all/product/productlist" var="url"></url:url>
+	<url:url value="/all/product/productlist" var="url"></url:url>
 <a href="${url }">Browse All Products</a>
 </body>
 <%@include file="footer.jsp" %>
