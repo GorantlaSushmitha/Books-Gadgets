@@ -34,7 +34,7 @@
 						<tr>
 							<div class="form-group">
 								<td><label for="categoryName">Enter Category name</label></td>
-								<td><form:input path="categoryName"></form:input></td>
+								<td><form:input path="categoryName" cssStyle="color:blue"></form:input></td>
 								<%-- <td><form:errors path="categoryName" cssStyle="color:#ff0000"></form:errors></td> --%>
 							</div>
 						</tr>
@@ -52,7 +52,7 @@
 						<th>Action</th>
 					</tr>
 					
-						<c:forEach items="${categoryList}" var="c" >
+						<c:forEach items="${categoryList}" var="c">
 						<tr/>
 						<tr/>
 						<tr>

@@ -17,7 +17,7 @@ Category Details<br>
 Category ID:   	 ${Category.cId }					<br>
 Category NAME:   ${category.categoryName }         	<br>
 
-<url:url value="/all/category/categorylist" var="url"></url:url>
+<url:url value="/all/category/categorylist" var="url" ></url:url>
 <a href="${url }">Browse All Categories</a>
 
 <%@ include file="footer.jsp" %>
