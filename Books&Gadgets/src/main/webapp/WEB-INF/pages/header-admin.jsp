@@ -30,11 +30,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="collapse-example">
 					<ul class="nav navbar-nav">
-						<url:url value="/pages/home.jsp" var="url"></url:url>
-						<li><a href="${url }">Home</a></li>
-						
-						<li><a href="/pages/aboutus.jsp">About Us<span class="sr-only">You are in about us page.</span></a></li>
-						<url:url value="/admin/product/productform" var="url"></url:url>
+						<url:url value="/home" var="url"></url:url>
+   						<li> <a href="${url }">Home</a> </li>
+  						<url:url value="/aboutus" var="url"></url:url>
+			  			<li><a href="${url }">About Us</a></li>
+   						<url:url value="/admin/product/productform" var="url"></url:url>
 						<li><a href="${url }">Add Product</a></li>
 						<url:url value="/all/product/productlist" var="url"></url:url>
 						<li><a href="${url }">All Product</a></li>

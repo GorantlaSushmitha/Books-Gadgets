@@ -1,10 +1,14 @@
 package com.niit.model;
 
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
@@ -26,9 +30,9 @@ public class Category
 		this.categoryName = categoryName;
 	}
 	private String categoryName;
-/*	@NotEmpty(message="Category name is mandatory")*/
-	/*@OneToMany(mappedBy="category")
-	private List<Product > products;*/
-	
+	/*@NotEmpty(message="Category name is mandatory")
+	@OneToMany(mappedBy="category")
+	private List<Product > products;
+	*/
 	
 }

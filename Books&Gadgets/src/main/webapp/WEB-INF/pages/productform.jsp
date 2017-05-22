@@ -20,49 +20,54 @@
 	</head>
 	<body>
 	<%@ include file="header-admin.jsp" %>
-		<div class="container wrapper">
-			<div class="container">
+		<img src="resources/images/background.png" width=" 1345" height="550" style="background-size: 10px;">
+		<div class="container">
+		
+			<div class="container-fluid">
+			
+			<div class="carousel-caption">
 				<url:url var="url" value="/admin/product/saveproduct"></url:url>
 				<form:form action="${url }" commandName="product" method="post" enctype="multipart/form-data">
-				<table>
+				<h2>PRODUCT FORM</h2>
+				<table align="center" >
 				<tr>
 					<div class="form-group">
 						<label for="id"></label>
 						<form:hidden path="id" ></form:hidden>
 					</div>
-					</tr>
-					<tr>
+				</tr>
+				<tr>
 					<div class="form-group">
 						<td><label for="name">Enter Product name</label></td>
-						<td><form:input path="name"></form:input></td>
+						<td><form:input path="name" cssStyle="color:blue"></form:input></td>
 						<td><form:errors path="name" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
-					</tr>
+				</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="manufacturer">Product Manufacturer</label></td>
-						<td><form:input  path="manufacturer"></form:input></td>
+						<td><form:input  path="manufacturer" cssStyle="color:blue"></form:input></td>
 						<td><form:errors path="manufacturer" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="price">Product Price</label></td>
-						<td><form:input  path="price"></form:input></td>
+						<td><form:input  path="price" cssStyle="color:blue"></form:input></td>
 						<td><form:errors path="price" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="unitInStock">Unit In Stock</label></td>
-						<td><form:input  path="unitInStock"></form:input></td>
+						<td><form:input  path="unitInStock" cssStyle="color:blue"></form:input></td>
 						<td><form:errors path="unitInStock" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="description">Description</label></td>
-						<td><form:input  path="description"></form:input></td>
+						<td><form:input  path="description" cssStyle="color:blue"></form:input></td>
 						<td><form:errors path="description" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
 					</tr>
@@ -70,24 +75,19 @@
 					<tr>
 						<div class="form-group">					
 					    <td><label for="Category">Category</label><td>	
-							<%-- <form:select  path="category.cid"	required="true">
-								<c:forEach items="${categoryList}" var="category">
-									<form:option path="category.cid" value="${category.cid}"/>${category.categoryName}
+							<form:select  path="category.cId"	required="true">
+								<c:forEach items="${categoryList}" var="category" >
+									<form:option path="category.cid" cssStyle="color:blue" value="${category.cId}">${category.categoryName }</form:option>
 								</c:forEach>
 					
-							</form:select> --%>
+							</form:select>
 						
-							<select>
+							<%-- <select>
 							    <c:forEach items="${categoryList}" var="category">
-							        <option  path="category.cid" value="${category.cId}"/>${category.categoryName}
+							        <option path="category.cid" value="${category.cId}"/>${category.categoryName}
 							    </c:forEach>
-							</select>
-							
-							
-							
-							<td>
-							
-							
+							</select> --%>
+						<td>							
 						</div>							
 					</tr>
 					<tr>
@@ -97,11 +97,20 @@
 						</div>
 					</tr>
 					<tr>
-					<td><input type="submit" value="Add Product"></td>
+					<td><input type="submit" style="color: blue;" value="Add Product"></td>
 					</tr>
+					<tr><td/></tr>
+					<tr><td/></tr>
+					<tr><td/></tr>
+					<tr><td/></tr>
+					
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
 					</table>
 				</form:form>
 			</div>
+		</div>
 		</div>
 	</body>
 

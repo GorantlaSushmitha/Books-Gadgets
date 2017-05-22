@@ -21,7 +21,9 @@
 	<body>
 	<%@ include file="header-admin.jsp" %>
 		<div class="container wrapper">
+		<img src="resources/images/background.png" width=" 200" height="200">
 			<div class="container">
+			
 				<url:url var="url" value="/admin/product/saveproduct"></url:url>
 				<form:form action="${url }" commandName="product" method="post" enctype="multipart/form-data">
 				<table>
@@ -30,14 +32,14 @@
 						<label for="id"></label>
 						<form:hidden path="id" ></form:hidden>
 					</div>
-					</tr>
-					<tr>
+				</tr>
+				<tr>
 					<div class="form-group">
 						<td><label for="name">Enter Product name</label></td>
 						<td><form:input path="name"></form:input></td>
 						<td><form:errors path="name" cssStyle="color:#ff0000"></form:errors></td>
 					</div>
-					</tr>
+				</tr>
 					<tr>
 					<div class="form-group">
 						<td><label for="manufacturer">Product Manufacturer</label></td>
@@ -70,24 +72,19 @@
 					<tr>
 						<div class="form-group">					
 					    <td><label for="Category">Category</label><td>	
-							<%-- <form:select  path="category.cid"	required="true">
+							<form:select  path="category.cId"	required="true">
 								<c:forEach items="${categoryList}" var="category">
-									<form:option path="category.cid" value="${category.cid}"/>${category.categoryName}
+									<form:option path="category.cid" value="${category.cId}">${category.categoryName}</form:option>
 								</c:forEach>
 					
-							</form:select> --%>
+							</form:select>
 						
-							<select>
+							<%-- <select>
 							    <c:forEach items="${categoryList}" var="category">
-							        <option  path="category.cid" value="${category.cId}"/>${category.categoryName}
+							        <option path="category.cid" value="${category.cId}"/>${category.categoryName}
 							    </c:forEach>
-							</select>
-							
-							
-							
-							<td>
-							
-							
+							</select> --%>
+						<td>							
 						</div>							
 					</tr>
 					<tr>
